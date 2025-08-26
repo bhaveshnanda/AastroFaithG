@@ -8,9 +8,9 @@ export default function Header() {
       <nav>
         <ul>
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/services">Services</Link></li>
-          <li><Link href="/book-appointment">Book Appointment</Link></li>
+          <li><Link href="/About">About</Link></li>
+          <li><Link href="/Services">Services</Link></li>
+          <li><Link href="/Appointment">Book Appointment</Link></li>
         </ul>
       </nav>
     </header>

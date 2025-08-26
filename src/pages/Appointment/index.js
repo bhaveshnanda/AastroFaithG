@@ -1,4 +1,4 @@
-import Layout from "../components/Layout/Layout";
+import Layout from "@/components/Layout/Layout";
 import styles from "./book-appointment.module.css";
 
 export default function BookAppointment() {
