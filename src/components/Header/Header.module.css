@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #5a2d82;
+  color: white;
+}
+.header ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.header a {
+  color: white;
+  text-decoration: none;
+}

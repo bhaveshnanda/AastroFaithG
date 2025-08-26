@@ -1,0 +1,10 @@
+.videos {
+  padding: 60px 20px;
+  text-align: center;
+}
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}

@@ -1,0 +1,13 @@
+.banner {
+  text-align: center;
+  padding: 80px 20px;
+  background: url("/banner.jpg") no-repeat center center/cover;
+  color: white;
+}
+.btn {
+  margin-top: 20px;
+  background: #e6a821;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

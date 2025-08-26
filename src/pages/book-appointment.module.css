@@ -1,0 +1,21 @@
+.appointment {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+}
+.appointment form {
+  display: flex;
+  flex-direction: column;
+}
+.appointment input, 
+.appointment textarea {
+  margin: 10px 0;
+  padding: 10px;
+}
+.appointment button {
+  background: #5a2d82;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}

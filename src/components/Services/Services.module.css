@@ -1,0 +1,15 @@
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
