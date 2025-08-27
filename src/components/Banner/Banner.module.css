@@ -1,13 +1,15 @@
 .banner {
   text-align: center;
   padding: 80px 20px;
-  background: url("/banner.jpg") no-repeat center center/cover;
+  /* background: url("/banner.jpg") no-repeat center center/cover; */
+  background-color: #e6a821;
   color: white;
 }
 .btn {
   margin-top: 20px;
   background: #e6a821;
   padding: 10px 20px;
-  border: none;
+  border: 2px solid white;
+  border-radius: 10px;
   cursor: pointer;
 }
