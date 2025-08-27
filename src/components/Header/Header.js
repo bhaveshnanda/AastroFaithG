@@ -84,6 +84,7 @@ const Navbar = () => {
             ))}
           </div>
 
+
           {/* Mobile Menu Toggle */}
           <button
             className={styles.mobileToggle}
