@@ -1,17 +1,336 @@
-.header {
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+  width: 100%;
+  top:0;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff4500 50%, #e63946 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+  height: 10%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navContent {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: #5a2d82;
+  justify-content: space-between;
+  height: 70px;
+  position: relative;
+}
+
+/* Logo Section */
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.logoIcon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.logoIcon svg {
+  width: 24px;
+  height: 24px;
   color: white;
 }
-.header ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+
+.logoText {
+  color: white;
 }
-.header a {
+
+.logoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-decoration: none !important;
+}
+
+.logoSubtitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.95;
+  line-height: 1.2;
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navButton {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 10px 24px;
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.navButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.navButton:hover::before {
+  left: 100%;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.navButton:active {
+  transform: translateY(0);
+}
+
+.contactBtn {
+  background-color: white !important;
+  color: #e63946 !important;
+  border-radius: 10px;
+}
+
+/* Mobile Menu Toggle */
+.mobileToggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobileToggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.mobileToggle svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff4500 50%, #e63946 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.mobileMenu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileMenuContent {
+  padding: 24px 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobileNavButton {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 16px 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobileNavButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.mobileNavButton:hover::before {
+  left: 100%;
+}
+
+.mobileNavButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navContent {
+    height: 64px;
+  }
+  
+  .logoIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logoIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .logoTitle {
+    font-size: 1.25rem;
+    text-decoration: none !important;
+  }
+  
+  .logoSubtitle {
+    font-size: 0.75rem;
+  }
+  
+  .desktopNav {
+    display: none;
+  }
+  
+  .mobileToggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .navContent {
+    height: 60px;
+  }
+  
+  .logoSection {
+    gap: 8px;
+  }
+  
+  .logoIcon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .logoIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .logoTitle {
+    font-size: 1.125rem;
+    text-decoration: none !important;
+  }
+  
+  .logoSubtitle {
+    font-size: 0.7rem;
+  }
+  
+  .mobileToggle {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .mobileToggle svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Animation for menu items */
+.mobileNavButton:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.mobileNavButton:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.mobileNavButton:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobileMenu.open .mobileNavButton {
+  animation: slideInUp 0.3s ease forwards;
+}
+
+/* Focus states for accessibility */
+.navButton:focus,
+.mobileNavButton:focus,
+.mobileToggle:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
 }
