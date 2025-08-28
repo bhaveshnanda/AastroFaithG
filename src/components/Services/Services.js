@@ -28,7 +28,7 @@ export default function Services() {
             Expert Astrology Services
           </h2>
           <p className={styles.description}>
-            Pandit Nitin Sharma is a renowned Vashikaran master and astrologer with expertise in solving all 
+            Aastrologer Goopal Agrawal is a renowned Vashikaran master and astrologer with expertise in solving all 
             life problems using ancient Vedic techniques and powerful mantras.
           </p>
         </div>

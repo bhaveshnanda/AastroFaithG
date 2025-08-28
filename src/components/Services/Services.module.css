@@ -1,7 +1,8 @@
 /* Astrology Services Component Styles */
 .astrologyServices {
-  width: 100%;
-  padding: 64px 16px;
+  width: 90%;
+  margin: auto;
+  padding: 64px 0px;
   background-color: #f9fafb;
 }
 
@@ -17,19 +18,20 @@
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: 34px !important;
+  font-family: sans-serif;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   line-height: 1.2;
 }
 
 .description {
-  font-size: 1.125rem;
+  font-size: 20px !important;
   color: #4b5563;
   max-width: 896px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* Services Grid */
@@ -42,7 +44,7 @@
 .serviceCard {
   background-color: white;
   border-radius: 16px;
-  padding: 24px;
+  padding: 16px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 1px solid #f3f4f6;
   transition: all 0.3s ease;
@@ -61,8 +63,8 @@
 
 .iconContainer {
   flex-shrink: 0;
-  width: 48px;
-  height: 48px;
+  width: 34px;
+  height: 34px;
   background: linear-gradient(135deg, #fb923c 0%, #ef4444 100%);
   border-radius: 50%;
   display: flex;
@@ -89,25 +91,29 @@
 /* Responsive Design */
 @media (min-width: 768px) {
   .title {
-    font-size: 3rem;
+      font-size: 28px !important;
   }
   
   .description {
-    font-size: 1.25rem;
+    font-size: 14px !important;
   }
   
   .servicesGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 32px;
   }
 }
 
-@media (min-width: 1024px) {
-  .title {
-    font-size: 3rem;
-  }
+@media (min-width: 1050px) {
   
   .servicesGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 800px) {
+  
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

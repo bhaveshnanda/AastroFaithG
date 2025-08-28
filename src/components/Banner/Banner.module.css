@@ -1,20 +1,91 @@
 .banner {
   text-align: center;
-  padding: 80px 20px;
+  padding: 10px 20px 25px 20px;
+  margin-top: 50px !important;
   /* background: url("/banner.jpg") no-repeat center center/cover; */
-  background: linear-gradient(90deg, #e63946 5%, #ff4500 35%, oklch(.795 .184 86.047) 90%);
+  background: linear-gradient(90deg, #e63946 0%, #ff4500 30%, oklch(.795 .184 86.047) 100%);
   color: white;
   width: 65%;
   margin: auto;
   border-radius: 20px;
+  overflow: hidden;
+  position: relative;
 }
+
+.banner1 {
+  position: relative;
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff4b5c, #ff9800, #ffc107);
+  border-radius: 16px;
+  color: white;
+
+}
+
+
+/* Star (top-left) */
+.star {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 30px;
+  animation: glowStar 2s infinite ease-in-out;
+}
+
+/* Moon (top-right) */
+.moon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  animation: glowMoon 3s infinite ease-in-out;
+}
+
+/* Star Glow Animation */
+@keyframes glowStar {
+  0%, 100% {
+    opacity: 0.6;
+    /* text-shadow: 0 0 5px #fff, 0 0 10px #ffeb3b, 0 0 20px #ff9800; */
+  }
+  50% {
+    opacity: 1;
+    /* text-shadow: 0 0 10px #fff, 0 0 20px #ffeb3b, 0 0 30px #ff9800; */
+  }
+}
+
+/* Moon Glow Animation */
+@keyframes glowMoon {
+  0%, 100% {
+    opacity: 0.6;
+    text-shadow: 0 0 3px #fff, 0 0 10px #90caf9, 0 0 20px #42a5f5;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 5px #fff, 0 0 25px #90caf9, 0 0 40px #42a5f5;
+  }
+}
+
+
+.banner h1 {
+  font-size: 24px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
 .btn {
   margin-top: 20px;
-  background: #e6a821;
+  background: white;
   padding: 10px 20px;
   border: 2px solid white;
   border-radius: 10px;
   cursor: pointer;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.btn:hover {
+  transform: scale(1.08);
 }
 
 .guaranteeContainer {
@@ -104,7 +175,7 @@
   background: rgba(255, 255, 255, 0.2); /* transparent white */
   border-radius: 16px;
   padding: 20px;
-  width: 280px;
+  width: 250px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease;
@@ -125,9 +196,10 @@
   margin-bottom: 10px;
 }
 
-.card h2 {
+.card h1 {
   color: white;
-  margin-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .card ul {
@@ -140,4 +212,30 @@
   margin: 6px 0;
   font-size: 14px;
   color: white;
+}
+
+.TextBelowCards{
+  margin-top: 40px !important;
+  width: 90%;
+  margin: auto;
+  background-color:  oklch(.795 .184 86.047);
+  border-radius: 12px;
+  padding: 15px;
+  color: black;
+}
+
+
+@media (max-width: 768px) {
+  .banner {
+    width: 85%;
+    padding-top: 35px;
+  }
+
+  .banner h1 {
+  font-size: 20px;
+  }
+
+  .cardsContainer {
+  margin-top: 25px;
+}
 }
