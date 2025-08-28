@@ -10,6 +10,7 @@ const Navbar = () => {
   const navRef = useRef(null);
 
   const navigationItems = [
+    { name: 'Home', href: '/'},
     { name: 'About', href: '/About' },
     { name: 'Services', href: '/Services' },
     { name: 'Book-Appointment', href: '/Appointment' },
