@@ -2,8 +2,11 @@
   text-align: center;
   padding: 80px 20px;
   /* background: url("/banner.jpg") no-repeat center center/cover; */
-  background-color: #e6a821;
+  background: linear-gradient(90deg, #e63946 5%, #ff4500 35%, oklch(.795 .184 86.047) 90%);
   color: white;
+  width: 65%;
+  margin: auto;
+  border-radius: 20px;
 }
 .btn {
   margin-top: 20px;
@@ -46,6 +49,8 @@
 }
 
 .mainHeading h1 {
+    padding-left: 10px;
+  padding-right: 10px;
   font-size: 42px;
   font-family: sans-serif;
   font-weight: 700;
@@ -69,16 +74,70 @@
 }
 
 .subHeading p {
+    padding-left: 20px;
+  padding-right: 20px;
   padding-top: 0px !important;
   margin-top: 0px !important;
   margin: 5px 0;              /* spacing between lines */
   text-align: center;          /* center text inside <p> */
-  font-size: 15px;
+  font-size: 16px;
   font-family: sans-serif;
 }
 
 .boldText{
   padding-top: 0px !important;
   margin-top: 0px !important;
-  font-weight: bold
+  font-weight: bold;
+  font-size: 14px !important;
+}
+
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2); /* transparent white */
+  border-radius: 16px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  
+  /* Glass effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li {
+  margin: 6px 0;
+  font-size: 14px;
+  color: white;
 }
