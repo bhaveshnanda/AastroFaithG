@@ -58,6 +58,9 @@ export default function BookAppointment() {
           <label>Time of Birth:</label>
           <input name="timeOfBirth" type="time" required />
 
+          <label>Birth City/Town and State:</label>
+          <input name="birthLocation" type="text" required />
+
           <label>Message:</label>
           <textarea name="message" placeholder="Your Query"></textarea>
 

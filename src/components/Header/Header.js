@@ -1,63 +1,63 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, Headphones } from 'lucide-react';
 import styles from './Header.module.css';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef(null);
 
   const navigationItems = [
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'About', href: '/About' },
+    { name: 'Services', href: '/Services' },
+    { name: 'Book-Appointment', href: '/Appointment' },
+    { name: 'Contact', href: '/Contact' },
   ];
 
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const target = event.target;
-      if (!target.closest(`.${styles.navbar}`)) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
-    if (isMobileMenuOpen) {
-      document.addEventListener('click', handleClickOutside);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMobileMenuOpen]);
-
-  // Close mobile menu on escape key
+  // Close on Escape key
   useEffect(() => {
     const handleEscapeKey = (event) => {
       if (event.key === 'Escape') {
         setIsMobileMenuOpen(false);
       }
     };
-
     document.addEventListener('keydown', handleEscapeKey);
     return () => document.removeEventListener('keydown', handleEscapeKey);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+// Close on click outside + scroll
+useEffect(() => {
+  if (!isMobileMenuOpen) return;
+
+  const handleClickOutside = (event) => {
+    // If clicked target is NOT inside the navbar, then close
+    if (navRef.current && !navRef.current.contains(event.target)) {
+      setIsMobileMenuOpen(false);
+    }
   };
 
-  const closeMobileMenu = () => {
+  const handleScroll = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Use capture phase so it runs before React's onClick
+  document.addEventListener('click', handleClickOutside, true);
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    document.removeEventListener('click', handleClickOutside, true);
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, [isMobileMenuOpen]);
+
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} ref={navRef}>
       <div className={styles.container}>
         <div className={styles.navContent}>
           {/* Logo Section */}
@@ -84,8 +84,7 @@ const Navbar = () => {
             ))}
           </div>
 
-
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Toggle */}
           <button
             className={styles.mobileToggle}
             onClick={toggleMobileMenu}

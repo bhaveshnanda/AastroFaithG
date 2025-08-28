@@ -13,3 +13,72 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+.guaranteeContainer {
+  padding-top: 50px;
+  display: flex; /* enable flexbox */
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically if needed */
+  margin: 20px 0;
+  margin-bottom: 0px;
+  width: 100%; /* full width container */
+}
+
+.guaranteeContainer h2 {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  border: transparent;
+  border-radius: 20px;
+  letter-spacing: 0.1em;
+  background: linear-gradient(135deg, #ff6b35 100%, #ff4500 50%, #e63946 100%);
+  text-align: center; /* text inside h1 is centered */
+}
+
+.mainHeading {
+  display: flex; /* enable flexbox */
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically if needed */
+  margin: 20px 0;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.mainHeading h1 {
+  font-size: 42px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: black;
+  text-align: center; /* text inside h1 is centered */
+}
+
+.mainHeading span {
+  color: oklch(0.705 0.213 47.604); /* sets the span text color */
+}
+
+.subHeading {
+    padding-top: 0px !important;
+  margin-top: 0px !important;
+  display: flex;              /* enable flexbox */
+  flex-direction: column;     /* stack children vertically */
+  justify-content: center;    /* vertical alignment */
+  align-items: center;        /* horizontal alignment */
+  width: 100%;
+  margin: 20px 0;             /* spacing around container */
+}
+
+.subHeading p {
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  margin: 5px 0;              /* spacing between lines */
+  text-align: center;          /* center text inside <p> */
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+.boldText{
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  font-weight: bold
+}
