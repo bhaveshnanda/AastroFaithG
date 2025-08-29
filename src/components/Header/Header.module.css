@@ -231,7 +231,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   .navContent {
     height: 64px;
   }
