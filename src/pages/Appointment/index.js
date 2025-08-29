@@ -21,6 +21,12 @@ export default function BookAppointment() {
       message: e.target.message.value,
       birthCountry: e.target.birthCountry.value,
       preferredLanguage: e.target.preferredLanguage.value,
+      education: e.target.education.value,
+      fieldOfEducation: e.target.fieldOfEducation.value,
+      currentProfession: e.target.currentProfession.value,
+      relationship: e.target.relationship.value,
+      children: e.target.children.value,
+      modeOfConsultation: e.target.modeOfConsultation.value,
     };
 
     try {
@@ -73,20 +79,89 @@ export default function BookAppointment() {
           <input name="timeOfBirth" type="time" required />
 
           <label>Birth City/Town and State:</label>
-          <input name="birthLocation" type="text" placeholder="Your City/Town and State" required />
+          <input
+            name="birthLocation"
+            type="text"
+            placeholder="Your City/Town and State..."
+            required
+          />
 
           <label>Birth Country:</label>
-          <input name="birthCountry" type="text" placeholder="Your birth country" required />
+          <input
+            name="birthCountry"
+            type="text"
+            placeholder="Your birth country..."
+            required
+          />
 
           <label>Preferred Language:</label>
-          <input name="preferredLanguage" type="text" placeholder="Your preferred country" required />
+          <input
+            name="preferredLanguage"
+            type="text"
+            placeholder="Your preferred country..."
+            required
+          />
 
           <label>Explain your query:</label>
           <textarea name="message" placeholder="Your Query"></textarea>
 
           <div className={styles.note}>
-            <p>These details are taken for astrologer's research and horoscope verification</p>
+            <p>
+              These details are taken for astrologer's research and horoscope
+              verification
+            </p>
           </div>
+
+          <label>Education Level:</label>
+          <select name="education" required>
+            <option value="">-- Select education --</option>
+            <option value="High-School">High School</option>
+            <option value="Graduate">Graduate</option>
+            <option value="Post-Graduate">Post Graduate</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label>Field of Education:</label>
+          <input
+            name="fieldOfEducation"
+            type="text"
+            placeholder="Your education field..."
+          />
+
+          <label>Current Profession:</label>
+          <input
+            name="currentProfession"
+            type="text"
+            placeholder="Your profession..."
+          />
+
+          
+          <label>Relationship Status:</label>
+          <select name="relationship" required>
+            <option value="">-- Select relationship Status --</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Seperated">Seperated</option>
+            <option value="Widowed">Widowed</option>
+          </select>
+                    
+          
+          <label>Children:</label>
+          <select name="children" required>
+            <option value="">-- Choose any option --</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+
+
+          <label>Mode of Consultation:</label>
+          <select name="modeOfConsultation" required>
+            <option value="">-- Mode of consultation --</option>
+            <option value="Google-Meet">Google Meet</option>
+            <option value="Phone-Call">Phone Call</option>
+          </select>
+
 
           <button type="submit" disabled={loading}>
             {loading ? "Submitting..." : "Submit"}

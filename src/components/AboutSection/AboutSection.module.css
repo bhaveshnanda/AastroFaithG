@@ -12,8 +12,17 @@
 .mainContent {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
+  align-items: stretch; 
   gap: 80px;
-  align-items: start;
+}
+
+/* Left & Right Columns */
+.leftColumn,
+.rightColumn {
+  flex: 1;                  /* take equal available space */
+  display: flex;
+  flex-direction: column;   /* keep content stacked inside */
+  justify-content: space-between;
 }
 
 /* Left Column Styles */
@@ -122,11 +131,12 @@
 
 /* Right Column Styles */
 .rightColumn {
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 .header {
-  margin-bottom: 32px;
+  margin-bottom: 10px;
+  padding: 0px 14px 0px 14px;
 }
 
 .title {
@@ -146,7 +156,8 @@
 }
 
 .description {
-  margin-bottom: 48px;
+  margin-bottom: 0px;
+  padding: 0px 14px 0px 14px;
 }
 
 .description p {
@@ -163,15 +174,25 @@
 
 /* Philosophy Section */
 .philosophySection {
-  background: rgba(255, 255, 255, 0.5);   /* translucent white */
-  backdrop-filter: blur(12px);            /* blur effect */
-  -webkit-backdrop-filter: blur(12px); 
+  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 114, 63, 0.30),
+    rgba(255, 255, 255, 0.15)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 24px;
-  padding: 40px;
-  margin-top: 40px;
+  padding: 0px 40px 40px 40px;
+  margin: 30px 0 0 0;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 4px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   position: relative;
   overflow: hidden;
 }
+
 
 .philosophySection::before {
   content: '';
@@ -199,7 +220,7 @@
   height: 4px;
   background: linear-gradient(90deg, #ff6b35, #ff8c42);
   border-radius: 2px;
-  margin: 0 auto 32px auto;
+  margin: 0 auto 0px auto;
   position: relative;
   z-index: 1;
 }
@@ -220,7 +241,7 @@
   font-size: 2.5rem;
   color: #ff8c42;
   font-weight: 300;
-  line-height: 1;
+  line-height: 0.7;
   text-align: end;
 }
 
@@ -236,7 +257,7 @@
 
 .quote {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.5;
   color: black;
   font-style: italic;
   margin: 0 20px;
@@ -246,11 +267,10 @@
 }
 
 .attribution {
-  text-align: center;
+  text-align: right;
   font-size: 0.9rem;
   color: #ff8c42;
   font-weight: 600;
-  margin-top: 24px;
 }
 
 /* Responsive Design */
