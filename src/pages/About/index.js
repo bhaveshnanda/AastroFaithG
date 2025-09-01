@@ -16,11 +16,11 @@ export default function About() {
                 ⭐ 48 Hours Guarantee Solution ⭐
               </div>
               <h1 className={styles.heroTitle}>
-                AstroFaithG{" "}
-                <span className={styles.highlight}>
-                  Astrologer Gopal Agrawal
-                </span>
+                AstroFaithG
               </h1>
+              <span className={styles.highlight}>
+                  Astrologer Gopal Agrawal
+              </span>
               <p className={styles.heroSubtitle}>
                 Trusted Guide to Ancient Vedic Wisdom & Modern Life Solutions
               </p>

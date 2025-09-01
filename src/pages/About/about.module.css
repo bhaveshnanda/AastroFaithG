@@ -14,8 +14,14 @@
 
 /* Hero Section */
 .heroSection {
-  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-  background-color: #1A237E;
+
+  background: linear-gradient(
+    360deg,
+    rgba(255, 114, 63, 0.30),
+    rgba(255, 255, 255, 0.15)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 4rem 0;
   text-align: center;
   position: relative;
@@ -58,23 +64,26 @@
 .heroTitle {
   font-size: 3.5rem;
   font-weight: 800;
-  color: white;
-  margin-bottom: 1rem;
+  color: black;
+  margin-bottom: -12px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .highlight {
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-top: 0px;
+  font-size: 20px;
   background-clip: text;
 }
 
 .heroSubtitle {
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 12px;
 }
 
 /* About Content */

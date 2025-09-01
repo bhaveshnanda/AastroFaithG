@@ -100,14 +100,23 @@
 
 .guaranteeContainer h2 {
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   border: transparent;
   border-radius: 20px;
   letter-spacing: 0.1em;
   background: linear-gradient(135deg, #ff6b35 100%, #ff4500 50%, #e63946 100%);
   text-align: center; /* text inside h1 is centered */
+  animation: pulse 2s infinite;
 }
+
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+
 
 .mainHeading {
   display: flex; /* enable flexbox */
@@ -198,7 +207,7 @@
 
 .card h1 {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -210,8 +219,9 @@
 
 .card ul li {
   margin: 6px 0;
-  font-size: 14px;
+  font-size: 13px;
   color: white;
+  font-weight: 900;
 }
 
 .TextBelowCards{

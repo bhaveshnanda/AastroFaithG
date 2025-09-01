@@ -1,14 +1,13 @@
 import Header from "../Header/Header";
 import styles from "./Layout.module.css";
+import Footer from "../Footer/Footer";
 
 export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Header />
       <main>{children}</main>
-      <footer className={styles.footer}>
-        © {new Date().getFullYear()} AstroFaith | All Rights Reserved
-      </footer>
+      <Footer />
     </div>
   );
 }
