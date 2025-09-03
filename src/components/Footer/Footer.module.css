@@ -463,12 +463,20 @@
   .services{
     display: none;
   } 
-
+  .newsletter{
+    display: none;
+  }
   .mainContent {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .brandSection{
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px){
+  .newsletter{
+    display: none;
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -43,7 +44,7 @@ const Footer = () => {
                 <span className={styles.logoIcon}>🔮</span>
               </div>
               <div>
-                <h3 className={styles.brandTitle}>Astro Faith G</h3>
+                <h3 className={styles.brandTitle}>AstroFaithG</h3>
                 <p className={styles.brandSubtitle}>India's No. 1 Astrologer</p>
               </div>
             </div>
@@ -55,14 +56,14 @@ const Footer = () => {
 
             {/* Newsletter Subscription */}
             <div className={styles.newsletter}>
-              <h4 className={styles.newsletterTitle}>Daily Horoscope</h4>
+              <h4 className={styles.newsletterTitle}>Get a Call Back</h4>
               <div className={styles.newsletterForm}>
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className={styles.emailInput}
                 />
-                <button className={styles.subscribeBtn}>Subscribe</button>
+                <button className={styles.subscribeBtn}>Send</button>
               </div>
             </div>
           </div>
@@ -73,18 +74,18 @@ const Footer = () => {
               <span className={styles.titleIcon}>✨</span>
               Our Services
             </h3>
-            <ul className={styles.servicesList}>
-              {services.map((service, index) => (
-                <li key={index} className={styles.serviceItem}>
-                  <a href="#" className={styles.serviceLink}>
-                    <span className={styles.serviceIcon}>⭐</span>
-                    <span>{service}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+<ul className={styles.servicesList}>
+  {services.map((service, index) => (
+    <li key={index} className={styles.serviceItem}>
+      <Link href="/Appointment" className={styles.serviceLink}>
+        <span className={styles.serviceIcon}>⭐</span>
+        <span>{service}</span>
+      </Link>
+    </li>
+  ))}
+</ul>
           </div>
-          
+
           {/* Quick Links Section */}
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>
@@ -112,7 +113,7 @@ const Footer = () => {
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📞</span>
                 <div>
-                  <p className={styles.contactText}>+91 98765 43210</p>
+                  <p className={styles.contactText}>+91 97302 05554</p>
                   <p className={styles.contactSubtext}>
                     24/7 Consultation Available
                   </p>
@@ -120,7 +121,7 @@ const Footer = () => {
               </div>
 
               <div className={styles.contactItem}>
-                <span className={styles.contactIcon}>✉️</span>
+                <span className={styles.contactIcon}>📩</span>
                 <div>
                   <p className={styles.contactText}>astrofaithg@gmail.com</p>
                   <p className={styles.contactSubtext}>Quick Email Response</p>
@@ -130,7 +131,7 @@ const Footer = () => {
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📍</span>
                 <div>
-                  <p className={styles.contactText}>New Delhi, India</p>
+                  <p className={styles.contactText}>Mumbai, India</p>
                   <p className={styles.contactSubtext}>Online & In-Person</p>
                 </div>
               </div>
@@ -162,9 +163,11 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <button className={styles.guaranteeBtn}>
-              Book Free Consultation
-            </button>
+            <Link href="/Appointment">
+              <button className={styles.guaranteeBtn}>
+                Book Consultation Now
+              </button>
+            </Link>
           </div>
         </div>
 

@@ -10,7 +10,7 @@ export default function Home() {
       <Banner />
       <AboutSection />
       <Services />
-      <VideoSection />
+      {/* <VideoSection /> */}
     </Layout>
   );
 }

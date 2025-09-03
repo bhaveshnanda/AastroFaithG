@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
 import Layout from "@/components/Layout/Layout";
 import styles from "./contact.module.css";
+import Image from "next/image";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -53,10 +54,11 @@ export default function ContactPage() {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.imageSection}>
-            <img
-              src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Contact us"
-              className={styles.contactImage}
+            <Image
+              src="/images/contactImage.png" // path relative to /public
+              alt="Support illustration"
+              width={500}
+              height={350}
             />
 
             <div className={styles.contactInfo}>
@@ -66,9 +68,9 @@ export default function ContactPage() {
                 <MapPin className={styles.contactIcon} />
                 <div>
                   <p className={styles.contactValue}>
-                    123 Business Street, Suite 100
+                    B2-B3 shree ram bhavan, station road
                     <br />
-                    New York, NY 10001
+                    bhayander west, Thane - 401101
                   </p>
                 </div>
               </div>
@@ -76,7 +78,7 @@ export default function ContactPage() {
               <div className={styles.contactItem}>
                 <Phone className={styles.contactIcon} />
                 <div>
-                  <p className={styles.contactValue}>+1 (555) 123-4567</p>
+                  <p className={styles.contactValue}>+91 97302 05554</p>
                 </div>
               </div>
 
@@ -104,7 +106,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     className={styles.input}
-                    placeholder="John"
+                    placeholder="Your First Name"
                   />
                 </div>
 
@@ -120,7 +122,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     className={styles.input}
-                    placeholder="Doe"
+                    placeholder="Your Last Name"
                   />
                 </div>
               </div>
@@ -137,7 +139,7 @@ export default function ContactPage() {
                   onChange={handleInputChange}
                   required
                   className={styles.input}
-                  placeholder="john.doe@example.com"
+                  placeholder="Your Email Address"
                 />
               </div>
 
@@ -152,7 +154,7 @@ export default function ContactPage() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   className={styles.input}
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="Your Phone Number"
                 />
               </div>
 
