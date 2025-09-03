@@ -1,0 +1,288 @@
+.container {
+  min-height: 80vh;
+  /* background: linear-gradient(135deg, #ffdadf 0%, #f093fb 100%); */
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.imageSection {
+  position: relative;
+  background: linear-gradient(135deg, #f75050 0%, #f5576c 100%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contactInfo {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contactItem {
+  display: flex;
+  gap: 16px;
+}
+
+.contactIcon {
+  width: 20px;
+  height: 20px;
+  margin-top: 14px;
+  flex-shrink: 0;
+}
+
+.contactValue {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+.formSection {
+  padding: 3rem 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nameRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input,
+.textarea {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9ca3af;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 80px;
+  max-height: 100px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.buttonIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .content {
+    gap: 2rem;
+  }
+  
+  .imageSection,
+  .formSection {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .contactInfo{
+    display: none;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .imageSection {
+    order: 1;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  
+  .formSection {
+    order: 2;
+    padding: 1.5rem;
+  }
+  
+  .contactImage {
+    height: 200px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .nameRow {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contactTitle {
+    font-size: 1.25rem;
+  }
+  
+  .contactItem {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .title {
+    font-size: 1.75rem;
+  }
+  
+  .imageSection,
+  .formSection {
+    padding: 1.5rem 1rem;
+  }
+  
+  .contactImage {
+    height: 180px;
+  }
+  
+  .input,
+  .textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .submitButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
