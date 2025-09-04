@@ -198,7 +198,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section
         <section className={styles.ctaSection}>
           <div className={styles.container}>
             <div className={styles.ctaContent}>
@@ -211,7 +211,7 @@ export default function About() {
               </button>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </Layout>
   );

@@ -30,21 +30,32 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We'll get back to you soon.");
+      const data = await res.json();
 
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+      if (res.ok) {
+        alert(data.message);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert(`❌ Failed: ${data.message}`);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("❌ Something went wrong. Try again later.");
+    }
 
     setIsSubmitting(false);
   };
@@ -52,14 +63,26 @@ export default function ContactPage() {
   return (
     <Layout>
       <div className={styles.container}>
+        {/* Full-page loader overlay */}
+        {isSubmitting && (
+          <div className={styles.loaderOverlay}>
+            <div className={styles.loaderContent}>
+              <div className={styles.spinner} />
+              <p className={styles.loaderMessage}>Your message is sending...</p>
+            </div>
+          </div>
+        )}
+
         <div className={styles.content}>
           <div className={styles.imageSection}>
-            <Image
-              src="/images/contactImage.png" // path relative to /public
-              alt="Support illustration"
-              width={500}
-              height={350}
-            />
+            <div className={styles.imageWrapper}>
+              <Image
+                src="/images/contactImage.png"
+                alt="Support illustration"
+                className={styles.contactImage}
+                fill
+              />
+            </div>
 
             <div className={styles.contactInfo}>
               <h3 className={styles.contactTitle}>Contact Information</h3>
@@ -195,14 +218,8 @@ export default function ContactPage() {
                 disabled={isSubmitting}
                 className={styles.submitButton}
               >
-                {isSubmitting ? (
-                  <div className={styles.spinner} />
-                ) : (
-                  <>
-                    <Send className={styles.buttonIcon} />
-                    Send Message
-                  </>
-                )}
+                <Send className={styles.buttonIcon} />
+                Send Message
               </button>
             </form>
           </div>

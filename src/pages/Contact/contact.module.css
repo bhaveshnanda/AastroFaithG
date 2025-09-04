@@ -5,13 +5,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color:rgb(255, 252, 229);
 }
 
 
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 0.6rem;
   max-width: 1200px;
   width: 100%;
   background: white;
@@ -22,7 +23,7 @@
 
 .imageSection {
   position: relative;
-  background: linear-gradient(135deg, #f75050 0%, #f5576c 100%);
+  background: linear-gradient(360deg, #e63946 0%, #ff4500 30%, oklch(.795 .184 86.047) 90%);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -32,7 +33,6 @@
 .contactImage {
   width: 100%;
   height: 300px;
-  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
@@ -42,6 +42,17 @@
   display: flex;
   flex-direction: column;
 }
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 300px; /* or any desired height */
+}
+
+.contactImage {
+  object-fit: contain; /* or cover, depending on how you want it */
+}
+
 
 .contactTitle {
   font-size: 1.5rem;
@@ -68,13 +79,13 @@
 }
 
 .formSection {
-  padding: 3rem 2rem;
+  padding: 2rem 1.8rem;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .nameRow {
@@ -142,7 +153,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: 1rem;
@@ -285,4 +296,45 @@
     padding: 0.875rem 1.5rem;
     font-size: 0.95rem;
   }
+}
+/* Loader styles */
+.loaderOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderContent .spinner {
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #ff6b6b; /* Accent color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+.loaderMessage {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

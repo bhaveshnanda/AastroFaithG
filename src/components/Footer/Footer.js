@@ -5,15 +5,6 @@ import Link from "next/link";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const services = [
-    "Love Problem Solution",
-    "Marriage Consultation",
-    "Black Magic Removal",
-    "Vashikaran Solutions",
-    "Career Guidance",
-    "Family Problems",
-  ];
-
   const quickLinks = [
     "About Astro Faith G",
     "Our Services",
@@ -22,6 +13,16 @@ const Footer = () => {
     "Contact Us",
     "Privacy Policy",
   ];
+
+const services = [
+  { name: "Refund & Cancellation Policy", path: "/Refund-Concellation-Policies" },
+  { name: "Terms & Conditions", path: "/terms-conditions" },
+  { name: "Privacy Policy", path: "/privacy-policy" },
+  { name: "Disclaimer", path: "/disclaimer" },
+  { name: "About Us", path: "/About" },
+  { name: "Pricing Policy", path: "/pricing-policy" },
+  { name: "Contact Us", path: "/Contact" },
+];
 
   return (
     <footer className={styles.footer}>
@@ -72,36 +73,36 @@ const Footer = () => {
           <div className={`${styles.section} ${styles.services}`}>
             <h3 className={styles.sectionTitle}>
               <span className={styles.titleIcon}>✨</span>
-              Our Services
-            </h3>
-<ul className={styles.servicesList}>
-  {services.map((service, index) => (
-    <li key={index} className={styles.serviceItem}>
-      <Link href="/Appointment" className={styles.serviceLink}>
-        <span className={styles.serviceIcon}>⭐</span>
-        <span>{service}</span>
-      </Link>
-    </li>
-  ))}
-</ul>
-          </div>
-
-          {/* Quick Links Section */}
-          <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>
-              <span className={styles.titleIcon}>🌟</span>
               Quick Links
             </h3>
-            <ul className={styles.linksList}>
-              {quickLinks.map((link, index) => (
-                <li key={index} className={styles.linkItem}>
-                  <a href="#" className={styles.link}>
-                    {link}
-                  </a>
+            <ul className={styles.servicesList}>
+              {quickLinks.map((service, index) => (
+                <li key={index} className={styles.serviceItem}>
+                  <Link href="/Appointment" className={styles.serviceLink}>
+                    <span className={styles.serviceIcon}>⭐</span>
+                    <span>{service}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
+
+{/* Quick Links Section */}
+<div className={styles.section}>
+  <h3 className={styles.sectionTitle}>
+    <span className={styles.titleIcon}>🌟</span>
+    Corporate Info
+  </h3>
+  <ul className={styles.linksList}>
+    {services.map((link, index) => (
+      <li key={index} className={styles.linkItem}>
+        <Link href={link.path} className={styles.link}>
+          {link.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
           {/* Contact Section */}
           <div className={`${styles.section} ${styles.contact}`}>

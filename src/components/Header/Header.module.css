@@ -4,7 +4,6 @@
   width: 100%;
   top:0;
   background: linear-gradient(90deg, #ff6b35 20%, #ff4500 80%, #e63946 100%);
-
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   height: 10%;
