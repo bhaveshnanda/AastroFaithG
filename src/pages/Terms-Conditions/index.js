@@ -36,7 +36,7 @@ export default function TermsAndConditions() {
           <strong>3. Payment Terms:</strong> All payments for services must be 
           completed through our authorized payment gateway, Razorpay. You agree 
           to provide valid payment information and authorize AastroFaithG to 
-          process the transaction. All payments are subject to Razorpay's terms 
+          process the transaction. All payments are subject to Razorpay&apos;s terms 
           and conditions. Charges once made are final and non-refundable, 
           unless otherwise specified in our Refund & Cancellation Policy.
         </p>

@@ -49,8 +49,8 @@ const AboutSection = () => {
               <p>
                 Gopal Agrawal is a distinguished astrologer with deep expertise in Vedic Astrology, 
                 Horoscope Analysis, Palmistry, and Numerology. With over 15 years of dedicated 
-                practice, he has become India's most trusted spiritual guide, helping thousands of 
-                individuals navigate life's complexities with ancient wisdom and modern insights.
+                practice, he has become India&apos;s most trusted spiritual guide, helping thousands of 
+                individuals navigate life&apos;s complexities with ancient wisdom and modern insights.
               </p>
               
               <p>
@@ -64,7 +64,7 @@ const AboutSection = () => {
                 What sets Gopal Agrawal apart is his unique ability to translate complex astrological 
                 concepts into actionable advice that empowers individuals to make informed decisions. 
                 He believes astrology is not just about predicting the future, but about providing tools 
-                for self-awareness and overcoming life's challenges.
+                for self-awareness and overcoming life&apos;s challenges.
               </p>
             </div>
 

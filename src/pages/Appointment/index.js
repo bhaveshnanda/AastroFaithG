@@ -107,7 +107,7 @@ export default function BookAppointment() {
 
           <div className={styles.note}>
             <p>
-              These details are taken for astrologer's research and horoscope
+              These details are taken for astrologer&apos;s research and horoscope
               verification
             </p>
           </div>

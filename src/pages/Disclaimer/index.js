@@ -67,7 +67,7 @@ export default function Disclaimer() {
         </p>
 
         <p className={styles.policyText}>
-          <strong>11. Children's Disclaimer:</strong> Our services are intended for users aged 18 years or older. 
+          <strong>11. Children&apos;s Disclaimer:</strong> Our services are intended for users aged 18 years or older. 
           We do not knowingly collect personal information from children under 18. If we become aware of such data, it will be deleted immediately.
         </p>
 
