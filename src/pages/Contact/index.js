@@ -108,7 +108,7 @@ export default function ContactPage() {
               <div className={styles.contactItem}>
                 <Mail className={styles.contactIcon} />
                 <div>
-                  <p className={styles.contactValue}>hello@company.com</p>
+                  <p className={styles.contactValue}>aastrofaithg@gmail.com</p>
                 </div>
               </div>
             </div>

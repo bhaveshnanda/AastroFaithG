@@ -15,12 +15,12 @@ const Footer = () => {
   ];
 
 const services = [
-  { name: "Refund & Cancellation Policy", path: "/Refund-Concellation-Policies" },
-  { name: "Terms & Conditions", path: "/terms-conditions" },
-  { name: "Privacy Policy", path: "/privacy-policy" },
-  { name: "Disclaimer", path: "/disclaimer" },
+  { name: "Refund & Cancellation Policy", path: "/Refund-Cancellation-Policies" },
+  { name: "Terms & Conditions", path: "/Terms-Conditions" },
+  { name: "Privacy Policy", path: "/Privacy-Policy" },
+  { name: "Disclaimer", path: "/Disclaimer" },
   { name: "About Us", path: "/About" },
-  { name: "Pricing Policy", path: "/pricing-policy" },
+  { name: "Pricing Policy", path: "/Pricing-Policy" },
   { name: "Contact Us", path: "/Contact" },
 ];
 
@@ -124,7 +124,7 @@ const services = [
               <div className={styles.contactItem}>
                 <span className={styles.contactIcon}>📩</span>
                 <div>
-                  <p className={styles.contactText}>astrofaithg@gmail.com</p>
+                  <p className={styles.contactText}>aastrofaithg@gmail.com</p>
                   <p className={styles.contactSubtext}>Quick Email Response</p>
                 </div>
               </div>
@@ -204,7 +204,7 @@ const services = [
                   </svg>
                 </a>
                 <a
-                  href="mailto:astrofaithg@gmail.com"
+                  href="mailto:aastrofaithg@gmail.com"
                   className={styles.socialLink}
                   aria-label="Email"
                 >

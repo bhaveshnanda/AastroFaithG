@@ -1,0 +1,38 @@
+.policyContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.policyTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333333;
+}
+
+.policyText {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #444444;
+  text-align: justify;
+}
+
+.policyText strong {
+  color: #000000;
+}
+
+.policyText a {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.policyText a:hover {
+  text-decoration: underline;
+}

@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     // Mail options
     const mailOptions = {
       from: `"${firstName} ${lastName}" <${process.env.EMAIL_USER}>`, // your Gmail
-      to: "nandabhavesh2003@gmail.com", // your inbox
+      to: "aastrofaithg@gmail.com", // your inbox
       replyTo: email, // ✅ user’s email (when you click reply, it goes to them)
       subject: `Contact Form: ${subject}`,
       html: `

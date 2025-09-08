@@ -51,8 +51,8 @@ export default function RefundCancellationPolicy() {
           <strong>Contact & Support:</strong> For rescheduling requests or any
           queries related to your booking, please contact our customer care team
           at{" "}
-          <a href="mailto:support@yourcompany.com">
-            support@yourcompany.com
+          <a href="mailto:aastrofaithg@gmail.com">
+            aastrofaithg@gmail.com
           </a>
           . Please include your booking ID, transaction details, and preferred
           rescheduling date and time. Our team will work with you to provide the
