@@ -46,7 +46,7 @@ const services = [
               </div>
               <div>
                 <h3 className={styles.brandTitle}>AstroFaithG</h3>
-                <p className={styles.brandSubtitle}>India's No. 1 Astrologer</p>
+                <p className={styles.brandSubtitle}>India&apos;s No. 1 Astrologer</p>
               </div>
             </div>
             <p className={styles.brandDescription}>

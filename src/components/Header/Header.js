@@ -68,7 +68,7 @@ useEffect(() => {
             </div>
             <div className={styles.logoText}>
               <h1 className={styles.logoTitle}>Astro Faith G</h1>
-              <p className={styles.logoSubtitle}>India's no. 1 Astrologer Gopal Agrawal</p>
+              <p className={styles.logoSubtitle}>India&apos;s no. 1 Astrologer Gopal Agrawal</p>
             </div>
           </Link>
 
