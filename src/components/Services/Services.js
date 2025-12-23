@@ -22,6 +22,9 @@ const services = [
   "Birth Time Rectification",
   "Urgent Horoscope Consultaion",
   "Follow up",
+  "Prashna Kundali",
+  "Vastu analysis",
+  "Kundali Milaan"
 ];
 
 export default function Services() {
