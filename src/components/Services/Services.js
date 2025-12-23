@@ -1,21 +1,27 @@
 "use client";
 
-import { Star } from 'lucide-react';
-import styles from './Services.module.css';
+import { Star } from "lucide-react";
+import styles from "./Services.module.css";
 
 const services = [
-  "Love Problem Solution",
-  "Love Marriage Specialist", 
-  "Husband Wife Problems",
-  "Divorce Problems Solution",
-  "Vashikaran Mantra",
-  "Black Magic Removal",
-  "Jadu Tona Expert",
-  "Inter Caste Marriage",
-  "Mohini Vashikaran",
-  "Kala Jadu Specialist",
-  "Love Spell Caster",
-  "Family Problem Solution"
+  // "Love Problem Solution",
+  // "Love Marriage Specialist",
+  // "Husband Wife Problems",
+  // "Divorce Problems Solution",
+  // "Vashikaran Mantra",
+  // "Black Magic Removal",
+  // "Jadu Tona Expert",
+  // "Inter Caste Marriage",
+  // "Mohini Vashikaran",
+  // "Kala Jadu Specialist",
+  // "Love Spell Caster",
+  // "Family Problem Solution"
+  "Horoscope Reading",
+  "Shubh Muhurat",
+  "Varshpal 1 year Pridiction",
+  "Birth Time Rectification",
+  "Urgent Horoscope Consultaion",
+  "Follow up",
 ];
 
 export default function Services() {
@@ -24,12 +30,13 @@ export default function Services() {
       <div className={styles.container}>
         {/* Header */}
         <div className={styles.header}>
-          <h2 className={styles.title}>
-            Expert Astrology Services
-          </h2>
+          <h2 className={styles.title}>Expert Astrology Services</h2>
           <p className={styles.description}>
-            Aastrologer Goopal Agrawal is a renowned Vashikaran master and astrologer with expertise in solving all 
-            life problems using ancient Vedic techniques and powerful mantras.
+            Astrologer Goopal Agrawal is a renowned astrologer with expertise in
+            addressing life’s challenges through time-tested Vedic astrology
+            principles. With a strong educational background and practical
+            approach, he offers clear and insightful guidance for personal,
+            professional, and spiritual growth.
           </p>
         </div>
 
@@ -42,11 +49,9 @@ export default function Services() {
                 <div className={styles.iconContainer}>
                   <Star className={styles.starIcon} />
                 </div>
-                
+
                 {/* Service Name */}
-                <h3 className={styles.serviceName}>
-                  {service}
-                </h3>
+                <h3 className={styles.serviceName}>{service}</h3>
               </div>
             </div>
           ))}
