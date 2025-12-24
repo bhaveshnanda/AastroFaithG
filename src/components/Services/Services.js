@@ -24,7 +24,10 @@ const services = [
   "Follow up",
   "Prashna Kundali",
   "Vastu analysis",
-  "Kundali Milaan"
+  "Kundali Milaan",
+  "Pranic healing-certified aratic yogi",
+  "Career counseling",
+  "Medical analysis"
 ];
 
 export default function Services() {
