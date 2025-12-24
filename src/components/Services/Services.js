@@ -36,7 +36,7 @@ export default function Services() {
           <h2 className={styles.title}>Expert Astrology Services</h2>
           <p className={styles.description}>
             Astrologer Goopal Agrawal is a renowned astrologer with expertise in
-            addressing life’s challenges through time-tested Vedic astrology
+            addressing life&apos;s challenges through time-tested Vedic astrology
             principles. With a strong educational background and practical
             approach, he offers clear and insightful guidance for personal,
             professional, and spiritual growth.
