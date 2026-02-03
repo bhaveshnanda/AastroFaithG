@@ -32,7 +32,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className={styles.astrologyServices}>
+    <section id="services" className={styles.astrologyServices}>
       <div className={styles.container}>
         {/* Header */}
         <div className={styles.header}>

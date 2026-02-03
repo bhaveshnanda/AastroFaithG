@@ -1,9 +1,72 @@
+.pageWrapper {
+  position: relative;
+  min-height: 36vh;
+}
+
+/* 🔥 Fixed background banner */
+.heroBanner {
+  position: fixed;
+  top: 60px; /* adjust if you have a fixed header */
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background-image: url("/images/hero-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🖤 Black shadow / overlay */
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* shadow strength */
+  z-index: 1;
+}
+
+/* 📝 Text on banner */
+.bannerText {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.bannerText h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.bannerText p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Foreground content */
+.content {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+
 .banner {
   text-align: center;
   padding: 10px 20px 25px 20px;
   margin-top: 50px !important;
   /* background: url("/banner.jpg") no-repeat center center/cover; */
-  background: linear-gradient(90deg, #e63946 0%, #ff4500 30%, oklch(.795 .184 86.047) 100%);
+  background: linear-gradient(
+    90deg,
+    #ea5a63 0%,
+    #ff6a3d 40%,
+    oklch(0.88 0.15 86.047) 125%
+  );
+
   color: white;
   width: 65%;
   margin: auto;
@@ -11,17 +74,6 @@
   overflow: hidden;
   position: relative;
 }
-
-.banner1 {
-  position: relative;
-  padding: 40px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #ff4b5c, #ff9800, #ffc107);
-  border-radius: 16px;
-  color: white;
-
-}
-
 
 /* Star (top-left) */
 .star {
@@ -43,7 +95,8 @@
 
 /* Star Glow Animation */
 @keyframes glowStar {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.6;
     /* text-shadow: 0 0 5px #fff, 0 0 10px #ffeb3b, 0 0 20px #ff9800; */
   }
@@ -55,16 +108,22 @@
 
 /* Moon Glow Animation */
 @keyframes glowMoon {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.6;
-    text-shadow: 0 0 3px #fff, 0 0 10px #90caf9, 0 0 20px #42a5f5;
+    text-shadow:
+      0 0 3px #fff,
+      0 0 10px #90caf9,
+      0 0 20px #42a5f5;
   }
   50% {
     opacity: 1;
-    text-shadow: 0 0 5px #fff, 0 0 25px #90caf9, 0 0 40px #42a5f5;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 25px #90caf9,
+      0 0 40px #42a5f5;
   }
 }
-
 
 .banner h1 {
   font-size: 24px;
@@ -89,7 +148,7 @@
 }
 
 .guaranteeContainer {
-  padding-top: 50px;
+  padding-top: 34px;
   display: flex; /* enable flexbox */
   justify-content: center; /* center horizontally */
   align-items: center; /* center vertically if needed */
@@ -110,13 +169,15 @@
   animation: pulse 2s infinite;
 }
 
-
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
-
-
 
 .mainHeading {
   display: flex; /* enable flexbox */
@@ -129,7 +190,7 @@
 }
 
 .mainHeading h1 {
-    padding-left: 10px;
+  padding-left: 10px;
   padding-right: 10px;
   font-size: 42px;
   font-family: sans-serif;
@@ -143,34 +204,33 @@
 }
 
 .subHeading {
-    padding-top: 0px !important;
+  padding-top: 0px !important;
   margin-top: 0px !important;
-  display: flex;              /* enable flexbox */
-  flex-direction: column;     /* stack children vertically */
-  justify-content: center;    /* vertical alignment */
-  align-items: center;        /* horizontal alignment */
+  display: flex; /* enable flexbox */
+  flex-direction: column; /* stack children vertically */
+  justify-content: center; /* vertical alignment */
+  align-items: center; /* horizontal alignment */
   width: 100%;
-  margin: 20px 0;             /* spacing around container */
+  margin: 20px 0; /* spacing around container */
 }
 
 .subHeading p {
-    padding-left: 20px;
+  padding-left: 20px;
   padding-right: 20px;
   padding-top: 0px !important;
   margin-top: 0px !important;
-  margin: 5px 0;              /* spacing between lines */
-  text-align: center;          /* center text inside <p> */
+  margin: 5px 0; /* spacing between lines */
+  text-align: center; /* center text inside <p> */
   font-size: 16px;
   font-family: sans-serif;
 }
 
-.boldText{
+.boldText {
   padding-top: 0px !important;
   margin-top: 0px !important;
   font-weight: bold;
   font-size: 14px !important;
 }
-
 
 .cardsContainer {
   display: flex;
@@ -188,13 +248,12 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease;
-  
+
   /* Glass effect */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 
 .card:hover {
   transform: translateY(-8px);
@@ -206,8 +265,8 @@
 }
 
 .card h1 {
-  color: white;
-  font-size: 18px;
+  color: black;
+  font-size: 19px;
   margin-bottom: 10px;
 }
 
@@ -219,33 +278,83 @@
 
 .card ul li {
   margin: 6px 0;
-  font-size: 13px;
-  color: white;
+  font-size: 16px;
+  color: black;
   font-weight: 900;
 }
 
-.TextBelowCards{
+.TextBelowCards {
   margin-top: 40px !important;
   width: 90%;
   margin: auto;
-  background-color:  oklch(.795 .184 86.047);
+  background-color: oklch(0.795 0.184 86.047);
   border-radius: 12px;
+  font-weight: 900;
+  font-size: 18px;
   padding: 15px;
   color: black;
 }
 
-
 @media (max-width: 768px) {
+.pageWrapper {
+  position: relative;
+  min-height: 30vh;
+}
+
+/* 🔥 Fixed background banner */
+.heroBanner {
+  position: fixed;
+  top: 60px; /* adjust if you have a fixed header */
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background-image: url("/images/hero-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .guaranteeContainer {
+  padding-top: 34px;
+  margin: auto;
+  margin-bottom: 0px;
+  width: 80%; /* full width container */
+}
+
+.guaranteeContainer h2 {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+}
+  
+
+.bannerText h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.bannerText p {
+  font-size: 1rem;
+  font-weight: 900;
+  opacity: 0.9;
+}
+
+
   .banner {
     width: 85%;
     padding-top: 35px;
   }
 
   .banner h1 {
-  font-size: 20px;
+    font-size: 20px;
   }
 
   .cardsContainer {
-  margin-top: 25px;
-}
+    margin-top: 25px;
+  }
 }

@@ -2,8 +2,9 @@
 .navbar {
   position: sticky;
   width: 100%;
-  top:0;
-  background: linear-gradient(90deg, #ff6b35 20%, #ff4500 80%, #e63946 100%);
+  top: 0;
+  background: linear-gradient(90deg, #ff8450 10%, #ff652a 40%, #ee5c66 120%);
+
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   height: 10%;
@@ -31,8 +32,8 @@
 }
 
 .logoIcon {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 50%;
@@ -50,7 +51,6 @@
   text-decoration: none;
 }
 
-
 .logoIcon:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
@@ -67,7 +67,7 @@
 }
 
 .logoTitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
   /* line-height: 1.2; */
@@ -76,7 +76,7 @@
 }
 
 .logoSubtitle {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   margin: 0;
   opacity: 0.95;
@@ -95,11 +95,11 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
-  padding: 10px 24px;
+  padding: 9px 22px;
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -107,13 +107,18 @@
 }
 
 .navButton::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -136,7 +141,6 @@
   background-color: white !important;
   color: #e63946 !important;
   border-radius: 10px;
-  
 }
 
 /* Mobile Menu Toggle */
@@ -210,13 +214,18 @@
 }
 
 .mobileNavButton::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -231,34 +240,34 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1050px) {
+@media (max-width: 1090px) {
   .navContent {
     height: 64px;
   }
-  
+
   .logoIcon {
     width: 40px;
     height: 40px;
   }
-  
+
   .logoIcon svg {
     width: 20px;
     height: 20px;
   }
-  
+
   .logoTitle {
     font-size: 1.25rem;
     text-decoration: none !important;
   }
-  
+
   .logoSubtitle {
     font-size: 0.75rem;
   }
-  
+
   .desktopNav {
     display: none;
   }
-  
+
   .mobileToggle {
     display: flex;
   }
@@ -268,39 +277,39 @@
   .container {
     padding: 0 0.75rem;
   }
-  
+
   .navContent {
     height: 60px;
   }
-  
+
   .logoSection {
     gap: 8px;
   }
-  
+
   .logoIcon {
     width: 36px;
     height: 36px;
   }
-  
+
   .logoIcon svg {
     width: 18px;
     height: 18px;
   }
-  
+
   .logoTitle {
     font-size: 1.125rem;
     text-decoration: none !important;
   }
-  
+
   .logoSubtitle {
     font-size: 0.7rem;
   }
-  
+
   .mobileToggle {
     width: 44px;
     height: 44px;
   }
-  
+
   .mobileToggle svg {
     width: 22px;
     height: 22px;

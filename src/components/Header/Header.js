@@ -1,58 +1,57 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { Menu, X, Headphones } from 'lucide-react';
-import styles from './Header.module.css';
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { Menu, X, Headphones } from "lucide-react";
+import styles from "./Header.module.css";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef(null);
 
   const navigationItems = [
-    { name: 'Home', href: '/'},
-    { name: 'About', href: '/About' },
-    { name: 'Services', href: '/Services' },
-    { name: 'Book-Appointment', href: '/Appointment' },
-    { name: 'Contact', href: '/Contact' },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/About" },
+    { name: "Services", href: "/#services" },
+    { name: "Book-Appointment", href: "/Appointment" },
+    { name: "Contact", href: "/Contact" },
   ];
 
   // Close on Escape key
   useEffect(() => {
     const handleEscapeKey = (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         setIsMobileMenuOpen(false);
       }
     };
-    document.addEventListener('keydown', handleEscapeKey);
-    return () => document.removeEventListener('keydown', handleEscapeKey);
+    document.addEventListener("keydown", handleEscapeKey);
+    return () => document.removeEventListener("keydown", handleEscapeKey);
   }, []);
 
-// Close on click outside + scroll
-useEffect(() => {
-  if (!isMobileMenuOpen) return;
+  // Close on click outside + scroll
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
 
-  const handleClickOutside = (event) => {
-    // If clicked target is NOT inside the navbar, then close
-    if (navRef.current && !navRef.current.contains(event.target)) {
+    const handleClickOutside = (event) => {
+      // If clicked target is NOT inside the navbar, then close
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
       setIsMobileMenuOpen(false);
-    }
-  };
+    };
 
-  const handleScroll = () => {
-    setIsMobileMenuOpen(false);
-  };
+    // Use capture phase so it runs before React's onClick
+    document.addEventListener("click", handleClickOutside, true);
+    window.addEventListener("scroll", handleScroll);
 
-  // Use capture phase so it runs before React's onClick
-  document.addEventListener('click', handleClickOutside, true);
-  window.addEventListener('scroll', handleScroll);
-
-  return () => {
-    document.removeEventListener('click', handleClickOutside, true);
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, [isMobileMenuOpen]);
-
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMobileMenuOpen]);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -67,8 +66,10 @@ useEffect(() => {
               <Headphones />
             </div>
             <div className={styles.logoText}>
-              <h1 className={styles.logoTitle}>Astro Faith G</h1>
-              <p className={styles.logoSubtitle}>India&apos;s no. 1 Astrologer Gopal Agrawal</p>
+              <h1 className={styles.logoTitle}>AstrooGoopal</h1>
+              <p className={styles.logoSubtitle}>
+                India&apos;s no. 1 Astrologer Go0pal Agrawal
+              </p>
             </div>
           </Link>
 
@@ -89,7 +90,7 @@ useEffect(() => {
           <button
             className={styles.mobileToggle}
             onClick={toggleMobileMenu}
-            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
@@ -97,7 +98,9 @@ useEffect(() => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ''}`}>
+        <div
+          className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.open : ""}`}
+        >
           <div className={styles.mobileMenuContent}>
             {navigationItems.map((item) => (
               <Link
