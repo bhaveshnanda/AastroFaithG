@@ -68,7 +68,7 @@ const Navbar = () => {
             <div className={styles.logoText}>
               <h1 className={styles.logoTitle}>AstrooGoopal</h1>
               <p className={styles.logoSubtitle}>
-                India&apos;s no. 1 Astrologer Go0pal Agrawal
+                India&apos;s no. 1 Astrologer Goopal Agrawal
               </p>
             </div>
           </Link>
