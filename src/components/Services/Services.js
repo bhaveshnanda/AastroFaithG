@@ -4,18 +4,6 @@ import { Star } from "lucide-react";
 import styles from "./Services.module.css";
 
 const services = [
-  // "Love Problem Solution",
-  // "Love Marriage Specialist",
-  // "Husband Wife Problems",
-  // "Divorce Problems Solution",
-  // "Vashikaran Mantra",
-  // "Black Magic Removal",
-  // "Jadu Tona Expert",
-  // "Inter Caste Marriage",
-  // "Mohini Vashikaran",
-  // "Kala Jadu Specialist",
-  // "Love Spell Caster",
-  // "Family Problem Solution"
   "Horoscope Reading",
   "Shubh Muhurat",
   "Varshpal 1 year Pridiction",

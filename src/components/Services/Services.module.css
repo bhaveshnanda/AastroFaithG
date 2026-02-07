@@ -1,13 +1,12 @@
 /* Astrology Services Component Styles */
 .astrologyServices {
-  width: 90%;
   margin: auto;
-  padding: 64px 0px;
+  padding: 24px 20px 54px 20px;
   background-color: white;
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -45,13 +44,17 @@
   background-color: white;
   border-radius: 16px;
   padding: 16px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 1px solid #f3f4f6;
   transition: all 0.3s ease;
 }
 
 .serviceCard:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transform: translateY(-4px);
 }
 
@@ -70,7 +73,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .starIcon {
@@ -91,13 +96,13 @@
 /* Responsive Design */
 @media (min-width: 768px) {
   .title {
-      font-size: 28px !important;
+    font-size: 28px !important;
   }
-  
+
   .description {
     font-size: 14px !important;
   }
-  
+
   .servicesGrid {
     grid-template-columns: repeat(1, 1fr);
     gap: 32px;
@@ -105,14 +110,12 @@
 }
 
 @media (min-width: 1050px) {
-  
   .servicesGrid {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
 @media (min-width: 800px) {
-  
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
   }

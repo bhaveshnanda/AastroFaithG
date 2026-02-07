@@ -6,6 +6,9 @@
 
 .appointment h1 {
   text-align: center;
+  color: #ef4444;
+  font-weight: 900;
+  font-size: 42px;
 }
 
 .appointment form {
@@ -22,13 +25,13 @@
   font-family: sans-serif;
   font-size: 16px;
 }
-.appointment button {
+/* .appointment button {
   background: #5a2d82;
   color: white;
   padding: 10px;
   border: none;
   cursor: pointer;
-}
+} */
 
 .appointment select {
   width: 100%;
@@ -70,4 +73,22 @@
   text-align: center; /* center multiline text */
   padding: 0px 8px 0px 8px; /* some spacing so text doesn’t touch edges */
   margin-bottom: 10px;
+}
+
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  /* border: 2px solid black; */
+  background: linear-gradient(90deg, rgb(234, 90, 99) 0%, rgb(255, 106, 61) 40%, lab(86.3443 9.74843 66.6722) 125%);
+}
+
+.btn:hover {
+  transform: scale(1.09);
 }

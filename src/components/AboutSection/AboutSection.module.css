@@ -299,6 +299,23 @@
 }
 
 @media (max-width: 768px) {
+  .statCard {
+  padding: 52px;
+}
+
+.statIcon {
+  width: 42px;
+  height: 42px;
+}
+
+.statNumber {
+  font-size: 2rem;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+}
+
   .aboutSection {
     padding: 60px 16px;
   }

@@ -60,8 +60,8 @@ const services = [
               <h4 className={styles.newsletterTitle}>Get a Call Back</h4>
               <div className={styles.newsletterForm}>
                 <input
-                  type="email"
-                  placeholder="Enter your email"
+                  type="tel"
+                  placeholder="Enter your phone number"
                   className={styles.emailInput}
                 />
                 <button className={styles.subscribeBtn}>Send</button>
