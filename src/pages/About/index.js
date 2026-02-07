@@ -15,12 +15,8 @@ export default function About() {
               <div className={styles.guaranteeBadge}>
                 ⭐ 48 Hours Guarantee Solution ⭐
               </div>
-              <h1 className={styles.heroTitle}>
-                AstroFaithG
-              </h1>
-              <span className={styles.highlight}>
-                  Astrologer Gopal Agrawal
-              </span>
+              <h1 className={styles.heroTitle}>AstroFaithG</h1>
+              <span className={styles.highlight}>Astrologer Gopal Agrawal</span>
               <p className={styles.heroSubtitle}>
                 Trusted Guide to Ancient Vedic Wisdom & Modern Life Solutions
               </p>
@@ -70,10 +66,10 @@ export default function About() {
                 <div className={styles.description}>
                   <p>
                     Gopal Agrawal is a distinguished astrologer with deep
-                    expertise in Vedic Astrology, Horoscope Analysis, Palmistry,
-                    and Numerology. With over 15 years of dedicated practice, he
-                    has become India&apos;s most trusted spiritual guide, helping
-                    thousands of individuals navigate life&apos;s complexities with
+                    expertise in Vedic Astrology, Horoscope Analysis, vastu.
+                    With over 15 years of dedicated practice, he has become
+                    India&apos;s most trusted spiritual guide, helping thousands
+                    of individuals navigate life&apos;s complexities with
                     ancient wisdom and modern insights.
                   </p>
 
@@ -155,10 +151,10 @@ export default function About() {
                 <div className={styles.cardIcon}>
                   <Star className={styles.icon} />
                 </div>
-                <h3>Palmistry</h3>
+                <h3>Vastu Shastra</h3>
                 <p>
-                  Reading life lines, fate lines, and palm patterns to
-                  understand destiny
+                  Analyzing your home or office layout using Vastu principles to
+                  improve health, wealth, and positive energy flow
                 </p>
               </div>
 

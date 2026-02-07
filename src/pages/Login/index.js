@@ -14,7 +14,7 @@ export default function Login() {
   // ✅ Redirect if already logged in
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) router.push("/admin");
+    if (token) router.push("/Admin");
   }, [router]);
 
   const handleLogin = async (e) => {
@@ -22,7 +22,7 @@ export default function Login() {
     setError("");
 
     try {
-      const res = await fetch("/api/admin/login", {
+      const res = await fetch("/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -33,7 +33,7 @@ export default function Login() {
       if (res.ok && data.success) {
         localStorage.setItem("token", data.token);
         localStorage.setItem("adminName", data.name || "Admin");
-        router.push("/admin");
+        router.push("/Admin");
       } else {
         setError(data.message || "❌ Invalid username or password");
       }

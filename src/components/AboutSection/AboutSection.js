@@ -48,7 +48,7 @@ const AboutSection = () => {
             <div className={styles.description}>
               <p>
                 Gopal Agrawal is a distinguished astrologer with deep expertise in Vedic Astrology, 
-                Horoscope Analysis, Palmistry, and Numerology. With over 15 years of dedicated 
+                Horoscope Analysis, vastu. With over 15 years of dedicated 
                 practice, he has become India&apos;s most trusted spiritual guide, helping thousands of 
                 individuals navigate life&apos;s complexities with ancient wisdom and modern insights.
               </p>

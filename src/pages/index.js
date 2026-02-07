@@ -3,6 +3,7 @@ import Banner from "@/components/Banner/Banner";
 import AboutSection from "@/components/AboutSection/AboutSection";
 import Services from "@/components/Services/Services";
 import VideoSection from "@/components/VideoSection/VideoSection";
+import BlogCarousel from "@/components/BlogCarousel/BlogCarousel";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Banner />
       <AboutSection />
       <Services />
+      <BlogCarousel />
       {/* <VideoSection /> */}
     </Layout>
   );

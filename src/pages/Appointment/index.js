@@ -65,7 +65,12 @@ export default function BookAppointment() {
           <input name="email" type="email" placeholder="Your Email" required />
 
           <label>Phone:</label>
-          <input name="phone" type="tel" placeholder="Your Phone Number" required />
+          <input
+            name="phone"
+            type="tel"
+            placeholder="Your Phone Number"
+            required
+          />
 
           <label>Gender:</label>
           <select name="gender" required>
@@ -124,7 +129,7 @@ export default function BookAppointment() {
             <option value="Post-Graduate">Post Graduate</option>
             <option value="other">Other</option>
           </select> */}
-{/* 
+          {/* 
           <label>Field of Education:</label>
           <input
             name="fieldOfEducation"
@@ -139,7 +144,6 @@ export default function BookAppointment() {
             placeholder="Your profession..."
           /> */}
 
-          
           {/* <label>Relationship Status:</label>
           <select name="relationship" required>
             <option value="">-- Select relationship Status --</option>
@@ -158,7 +162,7 @@ export default function BookAppointment() {
             <option value="No">No</option>
           </select> */}
 
-{/* 
+          {/* 
           <label>Mode of Consultation:</label>
           <select name="modeOfConsultation" required>
             <option value="">-- Mode of consultation --</option>
@@ -166,9 +170,8 @@ export default function BookAppointment() {
             <option value="Phone-Call">Phone Call</option>
           </select> */}
 
-
           <button className={styles.btn} type="submit" disabled={loading}>
-            {loading ? "Submitting..." : "Submit"}
+            {loading ? "Booking..." : "Book Now"}
           </button>
         </form>
 
